@@ -76,7 +76,7 @@
 
 <span class='doccomment'>/// Describes the shape of an obstacle.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
-<span class='kw'>enum</span> <span class='ident'>Shape</span> {
+<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Shape</span> {
     <span class='ident'>Circular</span> {
         <span class='doccomment'>/// The radius of the circular shape</span>
         <span class='ident'>radius</span>: <span class='ident'>f64</span>,
@@ -92,11 +92,11 @@
 
 <span class='doccomment'>/// Describes an obstacle to be added to the pathfinding algorithm.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
-<span class='kw'>struct</span> <span class='ident'>Obstacle</span> {
+<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Obstacle</span> {
     <span class='doccomment'>/// [x, y] position of the obstacle</span>
-    <span class='ident'>location</span>: [<span class='ident'>f64</span>; <span class='number'>2</span>],
+    <span class='kw'>pub</span> <span class='ident'>location</span>: [<span class='ident'>f64</span>; <span class='number'>2</span>],
     <span class='doccomment'>/// The shape specification of the obstacle</span>
-    <span class='ident'>shape</span>: <span class='ident'>Shape</span>,
+    <span class='kw'>pub</span> <span class='ident'>shape</span>: <span class='ident'>Shape</span>,
 }
 </pre>
 </section>

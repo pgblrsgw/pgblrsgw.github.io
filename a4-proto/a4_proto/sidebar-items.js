@@ -1,1 +1,1 @@
-initSidebarItems({});
+initSidebarItems({"enum":[["Shape","Describes the shape of an obstacle."]],"struct":[["Obstacle","Describes an obstacle to be added to the pathfinding algorithm."]]});
