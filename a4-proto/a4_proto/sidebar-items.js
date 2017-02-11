@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Obstacle","Describes an obstacle to be added to the pathfinding algorithm."],["Robot","Describes the robot which will be pathfinding."]]});
+initSidebarItems({"struct":[["Obstacle","Describes an obstacle to be added to the pathfinding algorithm."],["Point","An arbitrary point."],["Robot","Describes the robot which will be pathfinding."]]});
