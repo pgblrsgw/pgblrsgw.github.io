@@ -73,6 +73,12 @@
 <span id="28">28</span>
 <span id="29">29</span>
 <span id="30">30</span>
+<span id="31">31</span>
+<span id="32">32</span>
+<span id="33">33</span>
+<span id="34">34</span>
+<span id="35">35</span>
+<span id="36">36</span>
 </pre><pre class='rust '>
 <span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde_derive</span>;
@@ -102,6 +108,12 @@
 <span class='doccomment'>/// Describes the goal which the robot will pathfind to.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Goal</span> {
+    <span class='kw'>pub</span> <span class='ident'>point</span>: <span class='ident'>Point</span>,
+}
+
+<span class='doccomment'>/// Describes the boundary in which the pathfinding algorithm will search for a path.</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
+<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Boundary</span> {
     <span class='kw'>pub</span> <span class='ident'>point</span>: <span class='ident'>Point</span>,
 }
 </pre>
