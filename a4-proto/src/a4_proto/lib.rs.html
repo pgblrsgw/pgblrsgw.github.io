@@ -79,6 +79,8 @@
 <span id="34">34</span>
 <span id="35">35</span>
 <span id="36">36</span>
+<span id="37">37</span>
+<span id="38">38</span>
 </pre><pre class='rust '>
 <span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde_derive</span>;
@@ -114,6 +116,8 @@
 <span class='doccomment'>/// Describes the boundary in which the pathfinding algorithm will search for a path.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Boundary</span> {
+    <span class='kw'>pub</span> <span class='ident'>width</span>: <span class='ident'>f64</span>,
+    <span class='kw'>pub</span> <span class='ident'>length</span>: <span class='ident'>f64</span>,
     <span class='kw'>pub</span> <span class='ident'>point</span>: <span class='ident'>Point</span>,
 }
 </pre>
