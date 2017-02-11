@@ -56,47 +56,19 @@
 <span id="11">11</span>
 <span id="12">12</span>
 <span id="13">13</span>
-<span id="14">14</span>
-<span id="15">15</span>
-<span id="16">16</span>
-<span id="17">17</span>
-<span id="18">18</span>
-<span id="19">19</span>
-<span id="20">20</span>
-<span id="21">21</span>
-<span id="22">22</span>
-<span id="23">23</span>
-<span id="24">24</span>
-<span id="25">25</span>
-<span id="26">26</span>
-<span id="27">27</span>
 </pre><pre class='rust '>
 <span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde_derive</span>;
 
-<span class='doccomment'>/// Describes the shape of an obstacle.</span>
-<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
-<span class='kw'>pub</span> <span class='kw'>enum</span> <span class='ident'>Shape</span> {
-    <span class='ident'>Circular</span> {
-        <span class='doccomment'>/// The radius of the circular shape</span>
-        <span class='ident'>radius</span>: <span class='ident'>f64</span>,
-    },
-    <span class='ident'>Rectangular</span> {
-        <span class='doccomment'>/// The [width, height] of the rectangle</span>
-        <span class='ident'>dimensions</span>: [<span class='ident'>f64</span>; <span class='number'>2</span>],
-        <span class='doccomment'>/// An angle of 0 means the width is along the x-axis and height is along the y-axis.</span>
-        <span class='doccomment'>/// A left-handed coordinate system is used and `angle` is in radians.</span>
-        <span class='ident'>angle</span>: <span class='ident'>f64</span>,
-    },
-}
-
 <span class='doccomment'>/// Describes an obstacle to be added to the pathfinding algorithm.</span>
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Debug</span>, <span class='ident'>Clone</span>, <span class='ident'>Serialize</span>, <span class='ident'>Deserialize</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Obstacle</span> {
-    <span class='doccomment'>/// [x, y] position of the obstacle</span>
-    <span class='kw'>pub</span> <span class='ident'>location</span>: [<span class='ident'>f64</span>; <span class='number'>2</span>],
-    <span class='doccomment'>/// The shape specification of the obstacle</span>
-    <span class='kw'>pub</span> <span class='ident'>shape</span>: <span class='ident'>Shape</span>,
+    <span class='kw'>pub</span> <span class='ident'>width</span>: <span class='ident'>f64</span>,
+    <span class='kw'>pub</span> <span class='ident'>length</span>: <span class='ident'>f64</span>,
+    <span class='attribute'>#[<span class='ident'>serde</span>(<span class='ident'>rename</span> <span class='op'>=</span> <span class='string'>&quot;coordinateX&quot;</span>)]</span>
+    <span class='kw'>pub</span> <span class='ident'>coordinate_x</span>: <span class='ident'>f64</span>,
+    <span class='attribute'>#[<span class='ident'>serde</span>(<span class='ident'>rename</span> <span class='op'>=</span> <span class='string'>&quot;coordinateY&quot;</span>)]</span>
+    <span class='kw'>pub</span> <span class='ident'>coordinate_y</span>: <span class='ident'>f64</span>,
 }
 </pre>
 </section>
